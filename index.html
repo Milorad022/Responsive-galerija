@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Galerija</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+            font-size: calc(12px + (19 - 12) * ((100vw - 320px) / (1600 - 320)));
+            text-shadow: 1px 1px grey;
+            background-color: wheat;
+            }
+
+            p{
+                font-weight: bold;
+            }
+
+            #main-container{
+                max-width: 960px;
+                width: 90%;
+                margin: 0 auto;
+            }
+
+
+            @media screen and (max-width: 319px) {
+            .main-container {
+            font-size: 12px;
+                }
+                }
+
+            @media screen and (min-width: 1600px) {
+            .main-container {
+            font-size: 19px;
+                }
+                }
+
+            #container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(144px, 1fr));
+                grid-gap: 5vh;}
+
+                #container > .tile {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                }
+
+
+                img {
+                width: 25vh;
+                max-width: 100%;
+                position: absolute;
+                margin-bottom: 3vh;}
+
+
+
+        
+        .tile {
+                height: 144px;
+                background-image: linear-gradient( to top, white 20%, lightskyblue 20% );
+                border-radius: 10%;}
+
+      span {
+                color: black;
+                padding: 2px;
+                position: absolute;
+                align-self: flex-end;
+                margin-bottom: 0.5vh;  }
+
+        
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+<div id="main-container">
+    <h1>Gallery Heading
+    </h1>
+    <div id="container">
+        <div class="tile"><img src="placeholder-image.png" alt="slika">
+        <span>Image Title</span></div>
+        <div class="tile"><img src="placeholder-image.png" alt="slika">
+            <span>Image Title</span></div>
+            <div class="tile"><img src="placeholder-image.png" alt="slika">
+                <span>Image Title</span></div>
+                <div class="tile"><img src="placeholder-image.png" alt="slika">
+                    <span>Image Title</span></div>
+                    <div class="tile"><img src="placeholder-image.png" alt="slika">
+                        <span>Image Title</span></div>
+                        <div class="tile"><img src="placeholder-image.png" alt="slika">
+                            <span>Image Title</span></div>
+                            <div class="tile"><img src="placeholder-image.png" alt="slika">
+                                <span>Image Title</span></div>    
+                                <div class="tile"><img src="placeholder-image.png" alt="slika">
+                                    <span>Image Title</span></div>
+                                    <div class="tile"><img src="placeholder-image.png" alt="slika">
+                                        <span>Image Title</span></div>
+                                        <div class="tile"><img src="placeholder-image.png" alt="slika">
+                                            <span>Image Title</span></div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+</div>
+</body>
+</html>
